@@ -1,0 +1,512 @@
+#title, #payoff {
+		text-align: center;
+}
+
+#logo {
+	margin: 10px;
+}
+
+#banner {
+		display: flex;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	background: #F5F5F5;
+  	color: #000000;
+  	font-family: "Avenir Next", "Avenir", sans-serif;
+	margin: 0px;
+}
+
+#footer {
+	margin-top: 50px;
+	background-color: #AAABA3;
+	width: 100%;
+	height: 100px;
+}
+
+#footer p {
+	padding: 10px 0 0 10px;
+}
+
+#cookie {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 150px;
+	opacity: 50%;
+	background: #FA0;
+	text-align: center;
+}
+
+#cookie p {
+	color: #FFF;
+}
+
+nav input {
+	display: none;
+}
+
+nav a:hover {
+	color: red;
+}
+
+/* index styling */
+
+#index {
+	display: flex;
+	flex-direction: column;
+}
+
+#video-player {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 30px 0 10px 0;
+}
+
+#solar-products {
+	width: 60%;
+}
+
+#solar-products footer {
+	clear: both;
+}
+
+#solar-products article {
+	margin: 10px 50px 10px 80px;
+	height: 100%;
+	clear: both;
+	margin: 50px 0 50px 0;
+}
+
+#solar-reasons li {
+	margin-bottom: 10px;
+}
+
+/* how solar works styling */
+
+#how-solar-works {
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-rows: auto;
+	column-gap: 20px;
+  	row-gap: 20px;
+}
+
+.banner-grid {
+	grid-area: header;
+}
+
+#solar-panel {
+	grid-area: solar-panel;
+	margin: 0 20px 0 20px;
+}
+
+#solar-panel img {
+	width: 200px;
+	height: 200px;
+	align-self: center;
+	margin-top: 20px
+}
+
+#charge-controller {
+	grid-area: charge-controller;
+	margin: 0 20px 0 20px;
+}
+
+#battery-system {
+	grid-area: battery-system;
+	margin: 0 20px 0 20px;
+}
+
+#dc-power {
+	grid-area: dc-power;
+	margin: 0 20px 0 20px;
+}
+
+#inverter {
+	grid-area: inverter;
+	margin: 0 20px 0 20px;
+}
+
+#inverter img {
+	width: 200px;
+	height: 225px;
+	align-self: center;
+	margin-top: 20px
+}
+
+#ac-power {
+	grid-area: ac-power;
+	margin: 0 20px 0 20px;
+}
+
+#aside-products {
+	grid-area: aside-products;
+	display: flex;
+	justify-content: space-around;
+	margin: 60px 50px 50px 50px;
+	padding-top: 60px;
+	border-top: 10px solid #18181B;
+}
+
+#aside-products img {
+	width: 200px;
+	height: 180px;
+}
+
+.footer-grid {
+	grid-area: footer;
+}
+
+@media screen and (min-width: 1280px) {
+	#solar-reasons {
+		width: 225px;
+		color: white;
+		padding: 10px 20px 10px 10px;
+		right: 0px;
+		top: 40%;
+		margin-right: 2%;
+	 	position: fixed;
+		background-color: #616161;
+	}
+
+	#solar-products {
+		margin: 10px 50px 10px 80px;
+	}
+
+	#solar-products img {
+		float: left;
+		margin: 10px 20px 10px 0;
+	}
+
+	/* how solar works styling */
+
+	#how-solar-works {
+		grid-template-areas:
+			"header header header"
+			"charge-controller solar-panel battery-system"
+			"charge-controller solar-panel battery-system"
+			"inverter solar-panel battery-system"
+			"inverter solar-panel dc-power"
+			"inverter solar-panel dc-power"
+			"inverter solar-panel dc-power"
+			"inverter ac-power ac-power"
+			"aside-products aside-products aside-products"
+			"aside-products aside-products aside-products"
+			"footer footer footer";
+	}
+
+	#inverter {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#solar-panel {
+		display: flex;
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1279px) {
+	html, body {
+		overflow-x: hidden;
+	}
+
+	.video-player video {
+		min-width: 601px;
+	}
+
+	#solar-reasons {
+		margin: 50px auto 10px auto;
+
+	}
+
+	#solar-products {
+		display: flex;
+		flex-direction: column-reverse;
+		margin: 10px 50px 10px 40px;
+		width: 90%;
+		float: left;
+	}
+
+	#solar-products img {
+		float: right;
+		margin: 10px 0 10px 20px;
+	}
+
+	/* how solar works styling */
+
+	#how-solar-works {
+		grid-template-areas:
+			"header header"
+			"solar-panel charge-controller"
+			"solar-panel charge-controller"
+			"battery-system charge-controller"
+			"battery-system inverter"
+			"battery-system inverter"
+			"battery-system inverter"
+			"ac-power ac-power"
+			"ac-power ac-power"
+			"aside-products aside-products"
+			"footer footer ";
+	}
+
+	#dc-power {
+		display: none;
+	}
+
+	#aside-products a:last-child {
+		display: none;
+	}
+
+	#solar-panel img {
+		display: none;
+	}
+
+	#inverter img {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	/* Generic styling for devices bigger than a mobile phone */
+
+	#banner {
+		flex-direction: column;
+	}
+
+	nav {
+		background-color: #18181B;
+		width: 100%;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: row;
+		padding: 1px 0 5px 45px;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+	}
+
+	.menu a {
+		color: white;
+	}
+
+	.menu li {
+		min-width: 120px;
+		padding: 0 20px 0 20px;
+	}
+
+	#solar-products img {
+		width: 200px;
+		height: 180px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	html, body {
+		overflow-x: hidden;
+		font-size: 16px;
+	}
+
+	#banner h1 {
+		margin-left: 20px;
+	}
+
+	#banner h2 {
+		margin-left: 20px;
+	}
+
+	#logo {
+		display: none;
+	}
+
+	#banner {
+		width: 100%;
+		border-bottom: 10px solid #18181B;
+	}
+
+	#titles {
+		padding-right: 50px;
+	}
+
+	nav {
+		background-color: #18181B;
+		width: 25%;
+		padding-top: 8px;
+		padding-bottom: 4px;
+		padding-left: 10px;
+		position: relative;
+		z-index: 1;
+	}
+
+	nav a {
+		text-decoration: none;
+	  	color: #232323;
+	  	transition: color 0.3s ease;
+	}
+
+	nav input {
+	  	display: block;
+	  	width: 40px;
+	  	height: 32px;
+	  	position: absolute;
+		left: 2px;
+		top: 2px;
+	  	cursor: pointer;
+	  	opacity: 0;
+	  	z-index: 2;
+	}
+
+	nav span {
+	  	display: block;
+	  	width: 33px;
+	  	height: 4px;
+	  	margin-bottom: 5px;
+	  	position: relative;
+
+	  	background: #cdcdcd;
+	  	border-radius: 3px;
+
+	  	z-index: 1;
+
+	  	transform-origin: 4px 0px;
+	}
+
+	nav span:first-child {
+	  	transform-origin: 0% 0%;
+	}
+
+	nav span:nth-last-child(2) {
+	  	transform-origin: 0% 100%;
+	}
+
+	nav input:checked ~ span {
+	  	opacity: 1;
+	  	transform: rotate(45deg) translate(-2px, -1px);
+	  	background: #232323;
+	}
+
+	nav input:checked ~ span:nth-last-child(3) {
+	  	opacity: 0;
+	  	transform: rotate(0deg) scale(0.2, 0.2);
+	}
+
+	nav input:checked ~ span:nth-last-child(2) {
+	  	transform: rotate(-45deg) translate(0, -1px);
+	}
+
+	.menu {
+	  	position: absolute;
+	  	width: 280px;
+	  	margin: -50px 0 0 -190px;
+	  	padding-left: 50px;
+	  	padding-bottom: 20px;
+	  	padding-top: 50px;
+
+	  	background: #5F5F5F;
+
+	  	transform-origin: 0% 0%;
+	  	transform: translate(0, -100%);
+
+	  	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	}
+
+	.menu li {
+	  	padding: 10px 0;
+	  	font-size: 22px;
+	  	color: white;
+	}
+
+	nav input:checked ~ ul {
+	  	transform: none;
+	}
+
+	#video-player video {
+		display: none;
+	}
+
+	#solar-reasons {
+		margin: 50px auto 10px auto;
+		padding: 0 10px 0 10px;
+	}
+
+	#solar-products  {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 100%;
+	}
+
+	#solar-products article {
+		width: 80%;
+		margin: 10px auto 10px auto;
+	}
+
+	#solar-products a {
+		margin: auto;
+	}
+
+	#solar-products img {
+		width: 120px;
+		height: 100px;
+		margin: auto;
+	}
+
+	#solar-products .product-content {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	#solar-products footer {
+		text-align: center;
+	}
+
+	/* how solar works styling */
+
+	#how-solar-works {
+		grid-template-areas:
+			"header"
+			"inverter"
+			"battery-system"
+			"charge-controller"
+			"solar-panel"
+			"aside-products"
+			"footer";
+	}
+
+	#dc-power {
+		display: none;
+	}
+
+	#ac-power {
+		display: none;
+	}
+
+	#aside-products {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#aside-products img {
+		height: 150px;
+		width: 180px;
+		margin-top: 40px;
+	}
+
+	#solar-panel img {
+		display: none;
+	}
+
+	#inverter img {
+		display: none;
+	}
+}
