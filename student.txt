@@ -1,0 +1,4 @@
+Student name: Jelle Spreij
+Student number: 622120
+Student class: H3 (?)
+URL student GitHub repository: https://github.com/jellespreij/i-want-solar-site 
