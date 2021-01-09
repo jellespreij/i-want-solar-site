@@ -26,14 +26,34 @@ body {
 }
 
 h1, h2 {
-	font-family: "Notable" "Arial";
+	font-family: "Notable", "Arial";
+}
+
+h3 {
+	text-transform: uppercase;
+}
+
+section > article {
+	border-color: black;
+	border-width: 2px;
+	border-style: double;
+	padding: 10px;
+}
+
+article p::first-letter {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#cookie + footer {
+	background-color: #AAABA3;
 }
 
 #footer {
 	margin-top: 50px;
-	background-color: #AAABA3;
 	width: 100%;
 	height: 100px;
+	z-index: -2;
 }
 
 #footer p {
@@ -48,6 +68,7 @@ h1, h2 {
 	opacity: 50%;
 	background: #FA0;
 	text-align: center;
+	z-index: -1;
 }
 
 #cookie p {
@@ -66,6 +87,10 @@ nav a:active {
 	font-weight: bold;
 }
 
+nav a:visited {
+	color: #E5E5E5;
+}
+
 /* index styling */
 
 #index {
@@ -76,8 +101,20 @@ nav a:active {
 #video-player {
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-content: center;
 	padding: 30px 0 10px 0;
+}
+
+#video-player h3 {
+	text-align: center;
+}
+
+#video-player video {
+	display: flex;
+	align-self: center;
+	width: 100%;
+	max-width: 601px;
 }
 
 #solar-products {
@@ -160,7 +197,6 @@ nav a:active {
 #aside-products {
 	display: flex;
 	justify-content: space-around;
-	margin-right: 0 auto 0 auto;
 }
 
 .aside-products-grid {
@@ -248,7 +284,6 @@ nav a:active {
 
 #contact-form  {
 	grid-area: contact-form;
-	width: 50%;
 	margin: auto;
 }
 
@@ -333,7 +368,7 @@ nav a:active {
 	}
 
 	#table-info {
-		padding: 20px 0 20px 100px;
+		padding: 20px 100px 20px 100px;
 	}
 
 	.aside-products-flex {
@@ -360,7 +395,7 @@ nav a:active {
 	}
 
 	.video-player video {
-		min-width: 601px;
+		max-width: 601px;
 	}
 
 	#solar-reasons {
@@ -434,7 +469,12 @@ nav a:active {
 	}
 
 	#table-info {
-		padding-left: 5%;
+		padding: 20px 5% 20px 5%;
+		text-align: center;
+	}
+
+	figcaption {
+		display: none;
 	}
 
 	/* contact styling */
@@ -467,8 +507,9 @@ nav a:active {
 	.menu {
 		display: flex;
 		flex-direction: row;
-		padding: 1px 0 5px 45px;
-		justify-content: center;
+		padding: 15px 0 15px 0;
+		margin: 0 20% 0 20%;
+		justify-content: space-around;
 		align-items: center;
 		list-style: none;
 	}
@@ -499,6 +540,10 @@ nav a:active {
 		flex-direction: column;
 		padding: 20px 0 20px 40px;
 		width: 70%;
+	}
+
+	#contact-form  {
+		width: 50%;
 	}
 }
 
@@ -552,7 +597,7 @@ nav a:active {
 	  	display: block;
 		position: absolute;
 	  	width: 40px;
-	  	height: 32px;
+	  	height: 30px;
 		left: 2px;
 		top: 2px;
 	  	cursor: pointer;
@@ -575,13 +620,10 @@ nav a:active {
 	  	width: 33px;
 	  	height: 4px;
 	  	margin-bottom: 5px;
+		margin-right: 1px;
 	  	position: relative;
-
 	  	background: #cdcdcd;
-	  	border-radius: 3px;
-
 	  	z-index: 1;
-
 	  	transform-origin: 4px 0px;
 	}
 
@@ -703,6 +745,10 @@ nav a:active {
 		display: none;
 	}
 
+	figcaption {
+		display: none;
+	}
+
 	/* solar eu styling */
 
 	#renewable-energy-table {
@@ -731,5 +777,9 @@ nav a:active {
 
 	.aside-products-contact {
 		width: 100%;
+	}
+
+	#contact-form  {
+		width: 90%;
 	}
 }
