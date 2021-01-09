@@ -18,8 +18,15 @@ body {
 	width: 100%;
 	background: #F5F5F5;
   	color: #000000;
-  	font-family: "Avenir Next", "Avenir", sans-serif;
+  	font-family: "Arial", "Helvetica", "sans-serif";
 	margin: 0px;
+	letter-spacing: normal;
+	line-height: normal;
+	word-spacing: normal;
+}
+
+h1, h2 {
+	font-family: "Notable" "Arial";
 }
 
 #footer {
@@ -53,6 +60,10 @@ nav input {
 
 nav a:hover {
 	color: red;
+}
+
+nav a:active {
+	font-weight: bold;
 }
 
 /* index styling */
@@ -147,21 +158,123 @@ nav a:hover {
 }
 
 #aside-products {
-	grid-area: aside-products;
 	display: flex;
 	justify-content: space-around;
-	margin: 60px 50px 50px 50px;
+	margin-right: 0 auto 0 auto;
+}
+
+.aside-products-grid {
+	grid-area: aside-products;
+	border-top: #18181B solid 10px; /* border-top-color border-top-style border-top-width */
 	padding-top: 60px;
-	border-top: 10px solid #18181B;
 }
 
 #aside-products img {
-	width: 200px;
-	height: 180px;
+	width: 100%;
+	height: auto;
+	max-width: 200px;
+	min-width: 180px;
 }
 
 .footer-grid {
 	grid-area: footer;
+}
+
+/* solar eu styling */
+
+#renewable-energy-table th, td {
+	border-color: black;
+	border-width: 2px;
+	border-style: double;
+}
+
+#renewable-energy-table th {
+	background-color: #443E3E;
+	color: white;
+}
+
+#renewable-energy-table td:first-child {
+	padding-right: 20px;
+	background-color: #FF0;
+}
+
+#renewable-energy-table tr:nth-child(even) {
+	background-color: #CFF;
+}
+
+#renewable-energy-table tr:nth-child(odd) {
+	background-color: #FFF;
+}
+
+#solar-eu {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.banner-flex {
+	width: 100%;
+}
+
+#table-info {
+	width: 100%;
+}
+
+/* contact styling */
+
+#contact {
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-rows: auto;
+	column-gap: 20px;
+  	row-gap: 20px;
+}
+
+.aside-products-contact {
+	grid-area: aside-products-contact;
+	align-content: center;
+}
+
+.aside-products-contact a {
+	align-self: center;
+}
+
+#contact-info {
+	grid-area: contact-info;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#contact-form  {
+	grid-area: contact-form;
+	width: 50%;
+	margin: auto;
+}
+
+#contact-form fieldset {
+	margin: 50px auto 100px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact-form fieldset input {
+	margin-bottom: 20px;
+}
+
+#contact-form fieldset label {
+	margin-top: 10px;
+}
+
+#contact-form fieldset textarea {
+	width: 100%;
+	min-width: 200px;
+	resize: none;
+}
+
+#contact-form fieldset #submit-button {
+	width: 100px;
+	margin-top: 20px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -212,6 +325,33 @@ nav a:hover {
 		flex-direction: column;
 	}
 
+	/* solar eu styling */
+
+	#renewable-energy-table {
+		padding-left: 100px;
+		flex: 1 0 40%; /* flex-grow flex-shrink flex-basis */
+	}
+
+	#table-info {
+		padding: 20px 0 20px 100px;
+	}
+
+	.aside-products-flex {
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 15%; /* flex-grow flex-shrink flex-basis */
+		align-items: center;
+	}
+
+	/* contact styling */
+
+	#contact {
+		grid-template-areas:
+			"header header header"
+			"contact-info contact-info contact-info"
+			"contact-form contact-form aside-products-contact"
+			"footer footer footer";
+	}
 }
 
 @media screen and (min-width: 601px) and (max-width: 1279px) {
@@ -262,16 +402,53 @@ nav a:hover {
 		display: none;
 	}
 
-	#aside-products a:last-child {
-		display: none;
-	}
-
 	#solar-panel img {
 		display: none;
 	}
 
 	#inverter img {
 		display: none;
+	}
+
+	/* solar eu styling */
+
+	#renewable-energy-table {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	#renewable-energy-table table, footer {
+		align-self: center;
+	}
+
+	.aside-products-flex {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.aside-products-flex a:last-child {
+		display: none;
+	}
+
+	#table-info {
+		padding-left: 5%;
+	}
+
+	/* contact styling */
+
+	.aside-products-grid a:last-child {
+		display: none;
+	}
+
+	#contact {
+		grid-template-areas:
+			"header header"
+			"contact-info contact-info"
+			"contact-form aside-products-contact"
+			"footer footer";
 	}
 }
 
@@ -308,6 +485,20 @@ nav a:hover {
 	#solar-products img {
 		width: 200px;
 		height: 180px;
+	}
+
+	#contact {
+		grid-template-areas:
+			"header header"
+			"contact-info contact-info"
+			"contact-form aside-products-contact"
+			"footer footer";
+	}
+
+	.aside-products-contact {
+		flex-direction: column;
+		padding: 20px 0 20px 40px;
+		width: 70%;
 	}
 }
 
@@ -349,21 +540,34 @@ nav a:hover {
 	}
 
 	nav a {
+		color: #18181B;
 		text-decoration: none;
-	  	color: #232323;
-	  	transition: color 0.3s ease;
+	}
+
+	nav a:hover {
+		color: #EA1010;
 	}
 
 	nav input {
 	  	display: block;
+		position: absolute;
 	  	width: 40px;
 	  	height: 32px;
-	  	position: absolute;
 		left: 2px;
 		top: 2px;
 	  	cursor: pointer;
 	  	opacity: 0;
 	  	z-index: 2;
+	}
+
+	nav input:checked ~ span {
+	  	opacity: 1;
+	  	transform: rotate(45deg) translate(-2px, -1px);
+	  	background: #18181B;
+	}
+
+	nav input:checked ~ span:nth-last-child(3) {
+	  	opacity: 0;
 	}
 
 	nav span {
@@ -387,17 +591,6 @@ nav a:hover {
 
 	nav span:nth-last-child(2) {
 	  	transform-origin: 0% 100%;
-	}
-
-	nav input:checked ~ span {
-	  	opacity: 1;
-	  	transform: rotate(45deg) translate(-2px, -1px);
-	  	background: #232323;
-	}
-
-	nav input:checked ~ span:nth-last-child(3) {
-	  	opacity: 0;
-	  	transform: rotate(0deg) scale(0.2, 0.2);
 	}
 
 	nav input:checked ~ span:nth-last-child(2) {
@@ -508,5 +701,35 @@ nav a:hover {
 
 	#inverter img {
 		display: none;
+	}
+
+	/* solar eu styling */
+
+	#renewable-energy-table {
+		margin-top: 20px;
+		overflow: auto;
+	}
+
+	.aside-products-flex {
+		width: 100%;
+	}
+
+	#table-info {
+		display: none;
+	}
+
+	/* contact styling */
+
+	#contact {
+		grid-template-areas:
+			"header"
+			"contact-info"
+			"contact-form"
+			"aside-products-contact"
+			"footer";
+	}
+
+	.aside-products-contact {
+		width: 100%;
 	}
 }
