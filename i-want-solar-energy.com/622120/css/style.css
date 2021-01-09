@@ -312,7 +312,7 @@ nav a:visited {
 	margin-top: 20px;
 }
 
-@media screen and (min-width: 2323231280px) {
+@media screen and (min-width: 1280px) {
 	#solar-reasons {
 		width: 225px;
 		color: white;
@@ -389,7 +389,7 @@ nav a:visited {
 	}
 }
 
-@media screen and (min-width: 33232601px) and (max-width: 232321179px) {
+@media screen and (min-width: 601px) and (max-width: 1179px) {
 	html, body {
 		overflow-x: hidden;
 	}
@@ -492,7 +492,7 @@ nav a:visited {
 	}
 }
 
-@media screen and (min-width: 23232601px) {
+@media screen and (min-width: 601px) {
 	/* Generic styling for devices bigger than a mobile phone */
 
 	#banner {
@@ -547,7 +547,7 @@ nav a:visited {
 	}
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 600px) {
 	html, body {
 		overflow-x: hidden;
 		font-size: 16px;
