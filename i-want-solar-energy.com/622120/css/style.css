@@ -52,7 +52,7 @@ article p::first-letter {
 #footer {
 	margin-top: 50px;
 	width: 100%;
-	height: 100px;
+	height: 200px;
 	z-index: -2;
 }
 
@@ -308,11 +308,11 @@ nav a:visited {
 }
 
 #contact-form fieldset #submit-button {
-	width: 100px;
+	width: 150px;
 	margin-top: 20px;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 2323231280px) {
 	#solar-reasons {
 		width: 225px;
 		color: white;
@@ -389,7 +389,7 @@ nav a:visited {
 	}
 }
 
-@media screen and (min-width: 601px) and (max-width: 1279px) {
+@media screen and (min-width: 33232601px) and (max-width: 232321179px) {
 	html, body {
 		overflow-x: hidden;
 	}
@@ -492,7 +492,7 @@ nav a:visited {
 	}
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 23232601px) {
 	/* Generic styling for devices bigger than a mobile phone */
 
 	#banner {
@@ -547,18 +547,28 @@ nav a:visited {
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1600px) {
 	html, body {
 		overflow-x: hidden;
 		font-size: 16px;
 	}
 
 	#banner h1 {
+		font-size: 35px;
 		margin-left: 20px;
 	}
 
 	#banner h2 {
+		font-size: 32px;
 		margin-left: 20px;
+	}
+
+	h3 {
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 25px;
 	}
 
 	#logo {
@@ -572,6 +582,10 @@ nav a:visited {
 
 	#titles {
 		padding-right: 50px;
+	}
+
+	#solar-reasons {
+		font-size: 18px;
 	}
 
 	nav {
@@ -596,8 +610,8 @@ nav a:visited {
 	nav input {
 	  	display: block;
 		position: absolute;
-	  	width: 40px;
-	  	height: 30px;
+	  	width: 80px;
+	  	height: 60px;
 		left: 2px;
 		top: 2px;
 	  	cursor: pointer;
@@ -617,8 +631,8 @@ nav a:visited {
 
 	nav span {
 	  	display: block;
-	  	width: 33px;
-	  	height: 4px;
+	  	width: 48px;
+	  	height: 8px;
 	  	margin-bottom: 5px;
 		margin-right: 1px;
 	  	position: relative;
@@ -642,7 +656,7 @@ nav a:visited {
 	.menu {
 	  	position: absolute;
 	  	width: 280px;
-	  	margin: -50px 0 0 -190px;
+	  	margin: -50px 0 0 -250px;
 	  	padding-left: 50px;
 	  	padding-bottom: 20px;
 	  	padding-top: 50px;
@@ -656,8 +670,8 @@ nav a:visited {
 	}
 
 	.menu li {
-	  	padding: 10px 0;
-	  	font-size: 22px;
+	  	padding: 10px;
+	  	font-size: 30px;
 	  	color: white;
 	}
 
@@ -666,6 +680,10 @@ nav a:visited {
 	}
 
 	#video-player video {
+		display: none;
+	}
+
+	#video-player h3 {
 		display: none;
 	}
 
@@ -735,6 +753,7 @@ nav a:visited {
 		height: 150px;
 		width: 180px;
 		margin-top: 40px;
+		margin-bottom: 40px;
 	}
 
 	#solar-panel img {
@@ -752,8 +771,23 @@ nav a:visited {
 	/* solar eu styling */
 
 	#renewable-energy-table {
+		font-size: 20px;
+		display: flex;
+		align-content: center;
+		flex-direction: column;
+		width: 100%;
 		margin-top: 20px;
 		overflow: auto;
+	}
+
+	#renewable-energy-table table {
+		display: flex;
+		align-self: center;
+	}
+
+	#renewable-energy-table footer {
+		display: flex;
+		align-self: center;
 	}
 
 	.aside-products-flex {
@@ -781,5 +815,20 @@ nav a:visited {
 
 	#contact-form  {
 		width: 90%;
+	}
+
+	#contact-form label, legend {
+		font-size: 30px;
+	}
+
+	#contact-form input {
+		width: 30%;
+		height: 40px;
+		font-size: 30px;
+	}
+
+	#contact-form #submit-button {
+		height: 50px;
+		font-size: 30px;
 	}
 }
